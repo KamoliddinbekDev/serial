@@ -1,8 +1,20 @@
 window.addEventListener("DOMContentLoaded", () => {
+    
+    const loader = document.querySelector(".loader");
+
+    setTimeout(() => {
+	loader.style.opacity = "0";
+	setTimeout(() => {
+	    loader.style.opacity = "none";
+	}, 500);
+    }, 2000);
+
+    // Tab
     const tabsParent = document.querySelector(".tabheader__items"),
 	tabs = document.querySelectorAll(".tabheader__item"),
 	tabsContent = document.querySelectorAll(".tabcontent");
 
+    
     function hideTabContent() {
 	tabsContent.forEach(item => {
 	    item.classList.add("hide");
